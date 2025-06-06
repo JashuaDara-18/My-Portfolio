@@ -206,7 +206,7 @@ main{
 .img-box::after{
     content: '';
     position: absolute;
-    background-image: url("/assets/images/hero-img.jpg");
+    background-image: url("assets/images/hero-img.jpg");
     background-size: cover;
     border-radius: 10px;
     inset: 8px;
@@ -434,17 +434,17 @@ main{
 }
 
 .portfolio-img{
-    background-image: url("/assets/images/portfolio.jpg");
+    background-image: url("assets/images/portfolio.jpg");
     background-size: cover;
 }
 
 .amazon-img{
-    background-image: url("/assets/images/Shopping.jpg");
+    background-image: url("assets/images/Shopping.jpg");
     background-size: cover;
 }
 
 .login-page-img{
-    background-image: url("/assets/images/login-page.jpg");
+    background-image: url("assets/images/login-page.jpg");
     background-size: cover;
 }
 
