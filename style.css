@@ -22,20 +22,20 @@ body{
     width: 100%;
     padding: 1.5em 9%;
     font-size: 1rem;
+    background-color: #1f242d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 100;
 }
 
-
-
 .nav-heading{
-    font-size: 1.9em;
+    font-size: 2.3em;
     font-weight: 700;
     color: white;
     text-decoration: none;
-    transition: 0.5s linear;
+    transition: 0.3s linear;
 }
 
 .nav-heading:hover{
@@ -54,36 +54,49 @@ body{
 
 .navbar ul li {
     list-style-type: none;
+    width: 7em;
+    height: 2.4em;
     margin-left: 2em;
     font-size: 1.25em;
     font-weight: 500;
-    transition: 0.5s linear;
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s linear;
 }
 
 .navbar ul li:hover{
-    box-shadow: 0 0 5px #7cf03d;
-    transform: translatey(-10px);   
+    background-color: #24243e;
+    box-shadow: 0 0 10px #7cf03d;
+    color: #7cf03d;
+    transform: translatey(-3px);
 }
 
 .navbar ul li a{
+    height: 100%;
+    width: 100%;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    border-radius: 3px;
-    transition: 0.5s linear;
+    transition: 0.3s linear;
 }
 
 .navbar ul li a:hover{
-    background-color: #7cf03d;
-    color: black;
-}
+    color: #7cf03d;
+    
+} 
 
 .navbar ul li.active a{
     color: #7cf03d;
 }
 
 .navbar ul li.active a:hover{
-    background-color: #7cf03d;
-    color: black;
+    color: #7cf03d;
+}
+
+.navbar ul li a i{
+    margin-right: 1em;
 }
 
     /* Main - Section */
@@ -138,13 +151,36 @@ main{
     border: 2px solid #7cf03d;
     border-radius: 20px;
     color: #7cf03d;
-    transition: 0.5s linear;
+    transition: 0.3s linear;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn:hover{
     background-color: #7cf03d;
     color: black;
     box-shadow: 0 0 10px #7cf03d;
+    transform: translateY(-3px);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: 0.4s ease;
+}
+
+.btn:hover::after {
+    left: 100%;
+}
+
+
+.btn i{
+    margin-right: 0.6em;
 }
 
 .icons{
@@ -160,14 +196,14 @@ main{
     color: #7cf03d;
     border: 2px solid #7cf03d;
     border-radius: 50%;
-    transition: 0.5s linear;
+    transition: 0.3s linear;
 }
 
 .icons a:hover {
     background-color: #7cf03d;
     color: #1f242d;
     box-shadow: 0 0 10px #7cf03d;
-    transform: translatey(-10px);
+    transform: translatey(-10px) rotate(360deg);
 }
 
 .hero-right-section{
@@ -187,11 +223,11 @@ main{
     align-items: center;
     position: relative;
     overflow: hidden;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .img-box:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 .img-box::before{
@@ -199,7 +235,7 @@ main{
     position: absolute;
     width: 300px;
     height: 150%;
-    background: linear-gradient(#7cf03d, slateblue);
+    background-color: #7cf03d;
     animation: rotate 4s linear infinite;
 }
 
@@ -349,12 +385,12 @@ main{
     justify-content: space-around;
     align-items: center;
     border-radius: 1.25em;
-    transition: 0.5s linear;
+    transition: 0.3s linear;
 }
 
 .education-details:hover{
-    border: 2px solid black;
-    box-shadow: 0 0 10px black;
+    border: 2px solid #7cf03d;
+    box-shadow: 0 0 10px #7cf03d;
     transform: scale(1.05);
 }
 
@@ -410,12 +446,12 @@ main{
     justify-content: space-around;
     align-items: center;
     border-radius: 1.25em;
-    transition: 0.5s linear;
+    transition: 0.3s linear;
 }
 
 .project-container:hover{
-    border: 2px solid black;
-    box-shadow: 0 0 10px black;
+    border: 2px solid #7cf03d;
+    box-shadow: 0 0 10px #7cf03d;
     transform: scale(1.05);
 }
 
@@ -470,13 +506,35 @@ main{
     border: 2px solid #7cf03d;
     border-radius: 1.25em;
     color: #7cf03d;
-    transition: 0.5s linear;
+    transition: 0.3s linear;
+    position: relative;
+    overflow: hidden;
 }
 
 .project-right-section button:hover{
     background-color: #7cf03d;
     color: black;
     box-shadow: 0 0 14px #7cf03d;
+    transform: translateY(-3px);
+}
+
+.project-right-section button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: 0.4s ease;
+}
+
+.project-right-section button:hover::after{
+    left: 100%;
+}
+
+.project-right-section button i{
+    margin-right: 3px;
 }
 
 /* Footer - Section */
@@ -521,23 +579,13 @@ footer{
     align-items: center;
 }
 
-.name{
+.name, .email{
     height: 3.125em;
     width: 90%;
     color: white;
     font-size: 1em;
     background-color: black;
-    border: 2px dashed rgba(201, 201, 201, 0.7);
-    border-radius: 0.625em;
-}
-
-.email{
-    height: 3.125em;
-    width: 90%;
-    color: white;
-    font-size: 1em;
-    background-color: black;
-    border: 2px dashed rgba(201, 201, 201, 0.7);
+    border: 2px solid #7cf03d;
     border-radius: 0.625em;
 }
 
@@ -547,18 +595,21 @@ footer{
     color: white;
     font-size: 1em;
     background-color: black;
-    border: 2px dashed rgba(201, 201, 201, 0.7);
+    border: 2px solid #7cf03d;
     border-radius: 0.625em;
 }
 
 .form button{
     height: 3.125em;
-    width: 18.25em;
+    width: 17.25em;
     font-size: 1.25em;
     color: #7cf03d;
     background-color: black;
     border: 2px solid #7cf03d;
     border-radius: 0.625em;
+    position:relative;
+    overflow: hidden;
+    transition: 0.4s linear;
 }
 
 .form button:hover{
@@ -567,45 +618,107 @@ footer{
     box-shadow: 0 0 10px #7cf03d;
 }
 
+.form button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: 0.4s ease;
+}
+
+.form button:hover::after{
+    left: 100%;
+}
+
+.form button i{
+    margin-right: 0.5em;
+}
+
 /* Social - Media - Buttons */
 
 .social-media-buttons-container{
-    height: 10vh;
-    width: 40%;
+    height: 12vh;
+    width: 50%;
     background-color: black;
-    border-radius: 1.875em;
+    border-radius: 1em;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 .social-media-buttons-container button{
-    height: 1.875em;
+    height: 2.5em;
     width: 7.5em;
     font-size: 1.125em;
-    background-color: rgb(201, 201, 201,);
-    border-radius: 0.625em;
-    transition: 0.5s linear;
+    background-color: transparent;
+    border-radius: 0.5em;
+    transition: 0.4s linear;
+    position: relative;
+    overflow: hidden;
 }
 
 .social-media-buttons-container button:hover{
     transform: translateY(-5px);
-    box-shadow: 0 0 10px rgb(233, 232, 232);
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    color: white;
+}
+
+.social-media-buttons-container button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: 0.4s linear;
+}
+
+.social-media-buttons-container button:hover::after{
+    left: 100%;
+}
+
+.social-media-buttons-container button i{
+    margin-right: 0.7em;
 }
 
 .gmail-button{
     color: #fa4f4f;
+    border: 2px solid #fa4f4f;
+}
+
+.gmail-button:hover{
+    background-color: #fa4f4f;
 }
 
 .linkedin-button{
     color: rgb(0, 110, 254);
+    border: 2px solid rgb(0, 110, 254);
+}
+
+.linkedin-button:hover{
+    background-color: rgb(0, 110, 254);
 }
 
 .naukri-button{
-    color: blue;
+    color: rgb(8, 8, 253);
+    border: 2px solid rgb(8, 8, 253);
+}
+
+.naukri-button:hover{
+    background-color: rgb(8, 8, 253);
 }
 
 .instagram-button{
     color: #ff0073;
+    border: 2px solid #ff0073;
+}
+
+.instagram-button:hover{
+    background-color: #ff0073;
 }
 
 /* Scrolling Animations */
@@ -622,7 +735,7 @@ html{
 @keyframes autoshowAnimation{
     from{
         opacity: 0;
-        transform: translateY(200px) ;
+        transform: translateY(160px) ;
     }
     to{
         opacity: 1;
@@ -642,23 +755,40 @@ html{
         display: block;
     }
 
+    .nav-heading{
+        font-size: 1.65em;
+        font-weight: 500;
+    }
+
     .nav-links{
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 3.75em;
-        right: 1.25em;
-        width: 9em;
-        padding: 1em;
+        top: 5em;
+        right: 3.25em;
+        width: 10em;
+        padding-right: 1.2em;
         border-radius: 0.625em;
     }
 
     .nav-links.active {
         display: flex;
+        align-items: center;
         padding-left: 0%;
-        font-size: 1em;
+        font-size: 0.7em;
         background-color: slateblue;
         color: white;
+    }
+
+    .nav-links.active li:hover{
+        background: none;
+        box-shadow: none;
+        border: none;
+        transform: none;
+    }
+
+    .nav-links.active i{
+        display: none;
     }
 
     .hero-section{
@@ -669,6 +799,17 @@ html{
 
     .hero-left-section{
         width: 100vw;
+        text-align: center;
+    }
+
+    .hero-left-section .btn-icons{
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+    }
+
+    .hero-left-section .btn-icons .btn i{
+        margin-right: 0.3em;
     }
 
     .hero-right-section{
@@ -695,11 +836,12 @@ html{
 
     .education-section{
         flex-direction: column;
+        width: 100vw;
     }
 
     .education-details{
-        height: 12em;
-        width: 27em;
+        height: 12.5em;
+        width: 26em;
     }
 
     .projects-section{
@@ -708,8 +850,12 @@ html{
     }
 
     .project-container{
-        height: 12em;
-        width: 27em;
+        height: 12.5em;
+        width: 26em;
+    }
+
+    .project-right-section button i{
+        margin-right: 0.3em;
     }
 
     .footer{
@@ -732,12 +878,20 @@ html{
         width: 10em;
     }
 
+    .form button i{
+        margin-right: 0.3em;
+    }
+
     .social-media-buttons-container{
-        width: 80vw;
+        width: 100vw;
     }
 
     .social-media-buttons-container button{
-        width: 5em;
+        width: 6em;
+    }
+
+    .social-media-buttons-container button i{
+        margin-right: 0.3em;
     }
 
 }
