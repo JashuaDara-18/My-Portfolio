@@ -800,12 +800,27 @@ html{
     .hero-left-section{
         width: 100vw;
         text-align: center;
+        padding-left: 0.5em;
+        padding-top: 0.7em;
+    }
+
+    .hero-left-section-description{
+        text-align: center;
+    }
+
+    .hero-left-section-description p{
+        padding-left: 0rem;
     }
 
     .hero-left-section .btn-icons{
         flex-direction: column;
         gap: 1em;
+        width: 100%;
         text-align: center;
+    }
+
+    .hero-left-section .btn-icons .btn{
+        margin-left: 1em;
     }
 
     .hero-left-section .btn-icons .btn i{
